@@ -1,9 +1,17 @@
 export async function getGoogleHandwritingSupport(languages = ["en"]) {
-  if (!("queryHandwritingRecognizerSupport" in navigator)) {
+  if (!("createHandwritingRecognizer" in navigator)) {
     return null;
   }
 
-  return navigator.queryHandwritingRecognizerSupport({ languages });
+  if ("queryHandwritingRecognizerSupport" in navigator) {
+    return navigator.queryHandwritingRecognizerSupport({ languages });
+  }
+
+  if ("queryHandwritingRecognizer" in navigator) {
+    return navigator.queryHandwritingRecognizer({ languages });
+  }
+
+  return { basicSupportOnly: true };
 }
 
 export async function createGoogleHandwritingSession({
