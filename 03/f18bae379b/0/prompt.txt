@@ -1,0 +1,1 @@
+Create an AGENTS.md file that says for every change, make a commit then push
