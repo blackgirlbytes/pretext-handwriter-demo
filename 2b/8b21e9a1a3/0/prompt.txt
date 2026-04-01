@@ -1,0 +1,31 @@
+Build the first complete version of handwriter.
+
+Goal:
+Create a small app that turns handwriting into text.
+
+Requirements:
+- Support a Draw mode where I can handwrite in the browser on a canvas.
+- The Draw mode should use the Google handwriting recognition flow from the browser for stroke recognition.
+- Show the recognized text in the UI.
+- Keep the app simple and easy to iterate on.
+- Use a lightweight local setup if needed, but do not route Draw-mode recognition through OpenAI.
+
+Implementation preferences:
+- Keep the code easy to extend for future modes like image upload and camera capture.
+- Favor a clear, practical UI over polish in this first pass.
+- Keep the structure simple enough that later UI experiments will not be painful.
+
+After implementing:
+- commit the work
+- summarize the architecture
+- explicitly confirm that Draw mode uses the Google handwriting recognizer, not OpenAI
+- tell me how to test it locally
+- tell me the biggest current limitation
+
+---
+
+entire explain
+
+---
+
+im getting this error: Handwriting recognition is unavailable in this browser. Use current Chrome or Chromium on a supported platform.
